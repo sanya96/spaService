@@ -1,2 +1,3 @@
 @import "reset.css";
 @import "normalize.css";
+@import "../grunt/dist/css/style.css";

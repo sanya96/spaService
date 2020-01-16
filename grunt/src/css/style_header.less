@@ -1,1 +1,55 @@
-
+.container{
+  max-width: 1170px;
+  margin: 0 auto;
+  flex-grow: 1;
+  display: flex;
+}
+.menu-top{
+  top: 0;
+}
+header{
+  display: flex;
+  background-color: rgba(208, 174, 94, 0.8);
+  transition: top .5s ease-in-out;
+  position: fixed;
+  top: -90px;
+  left: 0;
+  right: 0;
+  z-index: 5;
+  .container{
+    justify-content: space-between;
+    padding: 0 15px;
+  }
+  .logo-container{
+    display: flex;
+    align-items: center;
+    img {
+      width: 50px;
+      padding: 10px 0;
+      fill: green;
+      margin-right: 15px;
+    }
+    span{
+      font-family: 'Merienda One', cursive;
+      font-size: 26px;
+      color: #fff;
+      margin-right: 20px;
+    }
+  }
+  .navbar-menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 600px;
+    flex-grow: 1;
+    margin-left: 10px;
+    li{
+      a{
+        color: #fff;
+        font-size: 15px;
+        text-transform: uppercase;
+        font-weight: 400;
+      }
+    }
+  }
+}
