@@ -1,14 +1,3 @@
-// (function () {
-//         this.goTop = $('#go-top');
-//         $(document).on('scroll', () =>{
-//             ($(this).scrollTop() >= 250) ? this.goTop.fadeIn() : this.goTop.fadeOut();
-//         });
-//
-//         this.goTop.on('click', () =>{
-//             $('html').animate({scrollTop:0},1000);
-//         })
-// })();
-
 $(function () {
     $(window).scroll(function(event) {
         ($(this).scrollTop() > 10) ?
@@ -17,21 +6,37 @@ $(function () {
     });
 });
 
-// $(function ($) {
-//     $(window).scroll(function(){
-//         $(".div").each(function () {
-//             var window_top = $(window).scrollTop();
-//             var div_top = $(this).offset().top;
-//             var div_1 = $(this).attr('id');
-//             if (window_top > div_top - 120){
-//                 $('#menu').find('td').removeClass('active');
-//                 $('#menu').find('td[class="'+div_1+'"]').addClass('active');
-//             }
-//         else{
-//
-//                 $('#menu').find('td[class="'+div_1+'"]').removeClass('active');
-//             };
-//
-//         });
-//     });
-// });
+var lastId,
+    topMenu = $("#top-menu"),
+    topMenuHeight = topMenu.outerHeight()+15,
+    menuItems = topMenu.find("a"),
+    scrollItems = menuItems.map(function(){
+        var item = $($(this).attr("href"));
+        if (item.length) { return item; }
+    });
+
+menuItems.click(function(e){
+    var href = $(this).attr("href"),
+        offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight+1;
+    $('html, body').stop().animate({
+        scrollTop: offsetTop
+    }, 300);
+    e.preventDefault();
+});
+
+$(window).scroll(function(){
+    var fromTop = $(this).scrollTop()+topMenuHeight;
+    var cur = scrollItems.map(function(){
+        if ($(this).offset().top < fromTop)
+            return this;
+    });
+    cur = cur[cur.length-1];
+    var id = cur && cur.length ? cur[0].id : "";
+
+    if (lastId !== id) {
+        lastId = id;
+        menuItems
+            .parent().removeClass("active")
+            .end().filter("[href='#"+id+"']").parent().addClass("active");
+    }
+});

@@ -163,6 +163,9 @@ header .navbar-menu li a {
 header .navbar-menu li:hover a {
   color: #71380f;
 }
+header .navbar-menu li.active a {
+  color: #222;
+}
 @media screen and (max-width: 768px) {
   header .container {
     flex-direction: column;
