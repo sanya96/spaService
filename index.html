@@ -14,14 +14,16 @@
     <div class="container">
         <div class="logo-container">
             <img src="img/logo.svg" alt="logo">
-            <span>Spa Service</span>
+            <h1>Spa Service</h1>
         </div>
+        <input type="checkbox" id="check-burger">
+        <label for="check-burger" class="burger-button"><span></span></label>
         <ul class="navbar-menu">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
-            <li><a href="#">Service</a></li>
-            <li><a href="#">Gallery</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#service">Service</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </div>
 </header>
@@ -34,9 +36,141 @@
         </div>
     </div>
     <div class="about-container" id="about">
-
+        <div class="about-block container">
+            <div class="about-description">
+                <h2>We care about you at <span>Spa Service</span></h2>
+                <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                </p>
+                <a href="#contact">JOIN NOW</a>
+            </div>
+            <div class="about-gallery">
+                <div class="gal-img-block">
+                    <img src="img/circle-img1.jpg" alt="spa img">
+                </div>
+                <div class="gal-img-block">
+                    <img src="img/circle-img2.jpg" alt="spa img">
+                </div>
+                <div class="gal-img-block">
+                    <img src="img/circle-img3.jpg" alt="spa img">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="service-container" id="service">
+        <div class="container">
+            <h2>We Specialize In</h2>
+            <div><img src="img/logo-service.svg" alt="logo"></div>
+            <ul>
+                <li>
+                    <div class="descript-serv">
+                        <h3>lorem ipsum amet</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi iure magni nobis praesentium quis, repudiandae?</p>
+                    </div>
+                    <img src="img/services-point.svg" alt="lotus">
+                </li>
+                <li>
+                    <div class="descript-serv">
+                        <h3>lorem ipsum amet</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum exercitationem facere ipsum perferendis praesentium, quam?</p>
+                    </div>
+                    <img src="img/services-point.svg" alt="lotus">
+                </li>
+                <li>
+                    <div class="descript-serv">
+                        <h3>lorem ipsum amet</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium architecto impedit ipsam optio quod</p>
+                    </div>
+                    <img src="img/services-point.svg" alt="lotus">
+                </li>
+                <li>
+                    <div class="descript-serv">
+                        <h3>lorem ipsum amet</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi fugit modi perspiciatis praesentium quaerat tenetur?</p>
+                    </div>
+                    <img src="img/services-point.svg" alt="lotus">
+                </li>
+                <li>
+                    <div class="descript-serv">
+                        <h3>lorem ipsum amet</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores at porro quod. Facilis, officia quia.</p>
+                    </div>
+                    <img src="img/services-point.svg" alt="lotus">
+                </li>
+                <li>
+                    <div class="descript-serv">
+                        <h3>lorem ipsum amet</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo labore magni maiores placeat unde. Numquam!</p>
+                    </div>
+                    <img src="img/services-point.svg" alt="lotus">
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="gallery-container" id="gallery">
+        <h2>Photo Gallery</h2>
+        <div><img src="img/logo-service.svg" alt="logo"></div>
+        <ul>
+            <li>
+                <div class="galleri-item"><img src="img/gallery-1.jpg" alt="img"></div>
+            </li>
+            <li>
+                <div class="galleri-item"><img src="img/gallery-2.jpg" alt="img"></div>
+            </li>
+            <li>
+                <div class="galleri-item"><img src="img/gallery-3.jpg" alt="img"></div>
+            </li>
+            <li>
+                <div class="galleri-item"><img src="img/gallery-4.jpg" alt="img"></div>
+            </li>
+            <li>
+                <div class="galleri-item"><img src="img/gallery-5.jpg" alt="img"></div>
+            </li>
+            <li>
+                <div class="galleri-item"><img src="img/gallery-6.jpg" alt="img"></div>
+            </li>
+            <li>
+                <div class="galleri-item"><img src="img/gallery-7.jpg" alt="img"></div>
+            </li>
+            <li>
+                <div class="galleri-item"><img src="img/gallery-8.jpg" alt="img"></div>
+            </li>
+        </ul>
+    </div>
+    <div class="contact-container" id="contact">
+        <div class="container">
+            <h2>Get in Touch</h2>
+            <div><img src="img/logo-service.svg" alt="logo"></div>
+            <div class="form-container">
+                <h2> <i class="fa fa-mobile-alt"></i> 1-567-124-55555</h2>
+                <h2> <i class="fa fa-map-marker-alt"></i> 184 Main Street East Perl Habour 8007</h2>
+                <h2> <i class="far fa-clock"></i> Mon – Sat 8.00 – 18.00 Sunday – CLOSED</h2>
+                <form action="#" method="post">
+                    <input type="text" name="name" placeholder="ENTER YOUR NAME" required>
+                    <input type="email" name="mail" placeholder="ENTER YOUR EMAIL" required>
+                    <input type="tel" name="phone" placeholder="ENTER YOUR MOBILE" required>
+                    <textarea name="message" rows="7" placeholder="ENTER YOUR MESSAGE HERE (OPTIONAL)"></textarea>
+                    <input type="submit" name="submit" value="SUBMIT">
+                </form>
+            </div>
+        </div>
     </div>
 </main>
+<footer>
+    <div class="container">
+        <div class="footer-logo-container"><img src="img/logo.svg" alt="logo"></div>
+        <div class="footer-info">
+            <p>Copyright &copy; 2020</p>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#service">Service</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
 <script src="js/script.js"></script>
 </body>
 </html>

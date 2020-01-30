@@ -1,0 +1,128 @@
+.contact-container {
+  background: #f2f2f2;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 1) 50%, rgba(242, 242, 242, 1) 50%);
+  padding: 50px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .container > h2 {
+    color: #282828;
+    font-family: 'Merienda One', cursive;
+    font-size: 40px;
+    margin-bottom: 30px;
+  }
+
+  img {
+    width: 70px;
+  }
+
+  div > div:first-of-type {
+    position: relative;
+
+    &::after,
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 120px;
+      border-top: 1px solid #d0ae5e;
+      top: calc(50% - 1px);
+    }
+
+    &::after {
+      left: 90px;
+    }
+
+    &::before {
+      left: -140px;
+    }
+  }
+
+  .form-container {
+    border: 5px solid #d0ae5e;
+    padding: 50px;
+    box-shadow: 0 0 25px 1px rgba(0, 0, 0, 0.24);
+    min-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    margin-top: 30px;
+
+    h2 {
+      text-align: center;
+      font-size: 18px;
+      color: #aaa6a6;
+      margin-bottom: 15px;
+
+      i {
+        margin-right: 5px;
+      }
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 30px;
+      width: 80%;
+
+      input,
+      textarea {
+        min-width: 100%;
+        background: #f4f1f1;
+        border: none;
+        padding: 17px;
+        resize: none;
+        margin-top: 20px;
+        color: #222;
+      }
+
+      input[type='submit'] {
+        margin-top: 50px;
+        min-width: 40%;
+        padding: 15px 20px;
+        background: #d0ae5e;
+        color: #fff;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        font-size: 15px;
+        font-weight: 500;
+        text-align: center;
+        transition: all 0.4s;
+
+        &:hover {
+          background: #222222;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contact-container .container > div:first-of-type::after,
+  .contact-container .container > div:first-of-type::before {
+    width: 80px;
+  }
+
+  .contact-container .container > div:first-of-type::before {
+    left: -95px;
+  }
+
+  .contact-container .container > h2 {
+    font-size: 30px;
+  }
+
+  .contact-container .form-container {
+    min-width: 80%;
+    padding: 20px;
+  }
+
+}
