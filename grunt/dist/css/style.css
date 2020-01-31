@@ -164,7 +164,7 @@ header .navbar-menu li:hover a {
   color: #71380f;
 }
 header .navbar-menu li.active a {
-  color: #222;
+  color: #71380f;
 }
 @media screen and (max-width: 768px) {
   header .container {
