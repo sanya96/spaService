@@ -144,11 +144,12 @@
             <div class="form-container">
                 <h2> <i class="fa fa-mobile-alt"></i> 1-567-124-55555</h2>
                 <h2> <i class="fa fa-map-marker-alt"></i> 184 Main Street East Perl Habour 8007</h2>
-                <h2> <i class="far fa-clock"></i> Mon – Sat 8.00 – 18.00 Sunday – CLOSED</h2>
+                <h2> <i class="far fa-clock"></i> Mon - Sat 8.00 - 18.00 Sunday - CLOSED</h2>
                 <form action="#" method="post">
-                    <input type="text" name="name" placeholder="ENTER YOUR NAME" required>
-                    <input type="email" name="mail" placeholder="ENTER YOUR EMAIL" required>
-                    <input type="tel" name="phone" placeholder="ENTER YOUR MOBILE" required>
+                    <h3 class="form-msg"></h3>
+                    <input type="text" name="name"  placeholder="ENTER YOUR NAME *" required>
+                    <input type="email" name="mail" placeholder="ENTER YOUR EMAIL *" required>
+                    <input type="tel" name="phone" placeholder="ENTER YOUR MOBILE *" required>
                     <textarea name="message" rows="7" placeholder="ENTER YOUR MESSAGE HERE"></textarea>
                     <input type="submit" name="submit" value="SUBMIT" class="submit-button">
                 </form>
@@ -171,6 +172,11 @@
         </div>
     </div>
 </footer>
+<div class="gallery-popup">
+    <span class="prev"> <i class="fa fa-chevron-left"></i></span>
+    <span class="close"><i class="far fa-times"></i></span>
+    <span class="next"> <i class="fa fa-chevron-right"></i></span>
+</div>
 <script src="js/script.js"></script>
 <script src="js/mail.js"></script>
 </body>

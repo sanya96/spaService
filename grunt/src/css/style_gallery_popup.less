@@ -1,0 +1,49 @@
+.gallery-popup{
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, .9);
+  z-index: 55;
+  justify-content: center;
+  align-items: center;
+  img{
+    width: 80%;
+  }
+  span.prev,
+  span.next{
+    position: absolute;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 35%;
+    flex-grow: 1;
+    min-width: 30px;
+    &:hover{
+      text-shadow: 0 0 10px yellow;
+    }
+  }
+  span.prev{
+    left: 30px;
+  }
+  span.next{
+    right: 30px;
+    justify-content: flex-end;
+  }
+  .close{
+    position: absolute;
+    right: 10px;
+    top: 30px;
+    height: 30px;
+    &:hover{
+    text-shadow: 0 0 10px yellow;
+    }
+  }
+  i{
+    color: white;
+    font-size: 30px;
+  }
+}

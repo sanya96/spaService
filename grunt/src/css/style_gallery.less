@@ -53,7 +53,35 @@
 
       div {
         width: 100%;
+        position: relative;
 
+        &:hover{
+          cursor: pointer;
+          &::before{
+            opacity: 1;
+            pointer-events: all;
+
+          }
+        }
+        &::before{
+          transition: opacity .5s;
+          content: '\f002';
+          position: absolute;
+          display: flex;
+          opacity: 0;
+          pointer-events: none;
+          align-items: center;
+          justify-content: center;
+          font-family: "Font Awesome 5 Pro";
+          color: white;
+          font-size: 32px;
+          left: 0;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          background: rgba(215, 187, 124, .5);
+          z-index: 5;
+        }
         img {
           width: 100%;
         }
